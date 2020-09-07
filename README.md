@@ -16,7 +16,7 @@
   <summary>点击展开查看详细内容</summary>
   <pre>
   > Soc: Rockchip RK3328, Quad-core Cortex-A53  
-  > DDR4 内存: 1 GB  
+  > DDR4 内存: 1 GB  频率：333 MHz
   > 网口：  
   > RTL8211E（10 / 100 / 1000 Mbps 以太网口 x 1）  
   > RTL8153B（USB 3.0 转 10 / 100 / 1000 Mbps 以太网口 x 1）  
