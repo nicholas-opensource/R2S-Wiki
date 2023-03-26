@@ -3,6 +3,7 @@
   欢迎查看 NanoPi-R2S 操作手册。本页旨在为 [NanoPi R2S/R4S Club](https://is.gd/nanopi_r4s) ，收集与解答 NanoPi-R2S 相关问题。  
   如有更好的意见与建议，随时欢迎 PR。  
   或者群内相关发言时直接 @NickBotNLP  
+  **盗我一字，男盗女娼。**
 
 ### 1、R2S 基本介绍
 
@@ -281,10 +282,9 @@
 * 墨子冥  
   地址：[msylgj/R2S-R4S-OpenWrt](https://github.com/msylgj/R2S-R4S-OpenWrt)  
 
-* RikudouPatrickstar（派大星大佬）
+* RikudouPatrickstar（派大星大佬）  
   地址：[RikudouPatrickstar/R2S-OpenWrt](https://github.com/RikudouPatrickstar/R2S-OpenWrt)  
 
-  
   **欢迎补充，欢迎您为开源社区作出贡献。如果您在 Telegram [NanoPi R4S Club](https://is.gd/nanopi_r4s) 群内询问哪个固件最好用/最稳定等愚蠢问题，您将被移出群聊，因为您没有阅读 Wiki，以及您并没有看到这行文字。**  
   
 ##### 4.1.3 基于 Jayanta525 源码的类原生固件（已弃用）
@@ -297,6 +297,11 @@
 
 #### 4.2 ImmortalWrt 固件
 
+  源于 ImmortalWrt 社区的努力，OpenWrt 的中国版本 Fork: ImmortalWrt 与大家见面了。继承了原生 OpenWrt 的优点，加入了中国版本的特殊优化以及更多的软件和驱动支持。并且支持软件源以及固件选择器，可以支持在线 imagebuilder，对 NanoPi R2S 的支持做出了关键性的贡献。  
+  源码地址：[immortalwrt/immortalwrt](https://github.com/immortalwrt/immortalwrt)  
+  下载地址/固件选择器：[FirmWare-Selector](https://firmware-selector.immortalwrt.org/)  
+
+  如遇到使用或安装问题，请加入 Telegram [NanoPi R4S Club](https://is.gd/nanopi_r4s) 群咨询。  
 
 ---
 
@@ -314,7 +319,7 @@
 
 #### 4.5 其它Linux 发行版固件
 
-* 等待 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 群主 Darya 补充，敬请期待！  
+* OpenSuSE 等固件，通常支持的阶段非常初级，通常 r8153 的网卡不可用。  
 
 ---
 
@@ -364,7 +369,7 @@
   firstboot -y && reboot now
   ```
   
-##### 4.5.3 从FriendlyWrt 升级到 OpenWrt
+##### 4.5.3 从FriendlyWrt 或其他系统升级到 OpenWrt
 
   建议使用 dd 命令进行写盘，参考上一条 4.5.2  
 
@@ -381,10 +386,10 @@
   A: 确认您刷的固件插入正确的网口，如正确，手动分配子网内 IP，若可以进入后台，恢复到出厂设置（执行重置），进行干净部署。若未解决，进行换网口操作。  
 
 * Q: 固件开启 BBR 加速了吗？  
-  A: 原生固件默认打开 BBR 加速，部分固件编译带有 Turbo ACC 工具可检查，在“网络 - Turbo ACC 加速”。5.4 内核的 BBR 已修复万兆掉速问题。  
+  A: BBR 不建议打开，仅对于上传有效。且会造成长链接无法再提速的问题。部分固件内置了 BBR2 来解决此问题，通常情况下建议使用 Cubic 流控。  
 
 * Q: Flow 加速 / 软件流量分载 / Shortcut-FE 加速要开吗？  
-  A: Flow Offloading / Shortcut-FE 等建议带宽超过 500 Mbps 的用户打开。请勿同时开启，切换使用时建议重启以避免不必要的问题。 两者性能基本一致。 
+  A: Flow Offloading 建议打开，通常固件默认打开。Shortcut-FE 是从旧高通搬运到如今的新内核上，会造成kernel panic 等问题，非常不建议使用。  
 
 * Q: HWNAT / 硬件流量分载要开吗？  
   A: OpenWrt 的硬件流量分载仅支持 MTK76xx，即使勾选也没有任何意义。  
@@ -393,7 +398,7 @@
   A: 如你的网络可以正常解析 DNS，非必要情况下无需开启；此项功能可能会与 AdGuardHome、SmartDNS 等发生冲突，请注意。  
 
 * Q: FullCone NAT 哪里开？可以开吗？  
-  A: 在 “网络 - 防火墙 - FullCone” 打开，建议打开。部份固件安装有 Turbo ACC 应用，可打开检查。某些主题可能存在显示项兼容性问题，可在防火墙的 WAN 口设置里打开。  
+  A: 在 “网络 - 防火墙 - FullCone” 打开，建议打开。部份固件安装有 Turbo ACC 应用，可打开检查。某些主题可能存在显示项兼容性问题，可在防火墙的 WAN 口设置里打开。此外 xt_fullcone 对 TCP 和 UDP 均有效，但是对于需要耗尽状态表的用户建议开启从 Asuswrt-Merlin 上搬运来的 BCM_fullcone，仅对 UDP 有效。  
 
 * Q: 类原生固件可以使用 sysupgrade 吗？  
   A: 可以上传 img.gz 文件在线升级，不建议保留配置。RootFS 相同的固件，使用 TLC 类型 TF 卡，可能存在选择“不保存配置”升级也是保存配置，参考 2.2.3 条目。  
@@ -402,9 +407,9 @@
   A: 如果你长期使用某一个人的版本，且未有重大更新，建议保留配置直接升级。跨版本升级请尽量干净部署。  
 
 * Q: 为什么更改不了 LAN IP / 管理地址？  
-  A: 这是 OpenWrt 19.07 带来的新 Feature，用于误操作失效后自动回滚。可点击保存并应用旁边向下的箭头，选择“强制应用”，或参考 5.2.2 条目。  
+  A: 这是 OpenWrt 从 19.07 以来的新 Feature，用于误操作失效后自动回滚。可点击保存并应用旁边向下的箭头，选择“强制应用”，或参考 5.2.2 条目。  
 
-  **其他问题请先学会善用 [搜索引擎](https://www.google.com/)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 中提出、讨论。**  
+  **其他问题请先学会善用 [搜索引擎](https://www.google.com/)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R4S Club](https://is.gd/nanopi_r4s) 中提出、讨论。**  
 
 ---
 
