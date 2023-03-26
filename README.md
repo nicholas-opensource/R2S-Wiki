@@ -1,8 +1,8 @@
 ## NanoPi-R2S 操作手册
 
-  欢迎查看 NanoPi-R2S 操作手册。本页旨在为 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) ，收集与解答 NanoPi-R2S 相关问题。  
+  欢迎查看 NanoPi-R2S 操作手册。本页旨在为 [NanoPi R2S/R4S Club](https://is.gd/nanopi_r4s) ，收集与解答 NanoPi-R2S 相关问题。  
   如有更好的意见与建议，随时欢迎 PR。  
-  或者群内相关发言时直接 @popo  
+  或者群内相关发言时直接 @NickBotNLP  
 
 ### 1、R2S 基本介绍
 
@@ -44,9 +44,9 @@
 
 * 类原生固件灯光说明：  
     
-  > 7 月 17 日后，SYS 灯引导时闪烁，启动后常亮和 LAN 口网口灯不亮是正常现象。  
-  > 7 月 22 日后，加入新 Patch 解决 LAN 口网口灯不亮的问题。电平灯和 WAN 相反（接入后黄灯常亮，传输数据时绿灯闪烁）。  
-  > 7 月 28 日后，官方正式编写代码支持 LAN 口电平灯显示，状态和 WAN 相同（接入后绿灯常亮，传输数据时黄灯闪烁）。  
+  > 2020 年 7 月 17 日后，SYS 灯引导时闪烁，启动后常亮和 LAN 口网口灯不亮是正常现象。  
+  > 2020 年 7 月 22 日后，加入新 Patch 解决 LAN 口网口灯不亮的问题。电平灯和 WAN 相反（接入后黄灯常亮，传输数据时绿灯闪烁）。  
+  > 2020 年 7 月 28 日后，官方正式编写代码支持 LAN 口电平灯显示，状态和 WAN 相同（接入后绿灯常亮，传输数据时黄灯闪烁）。  
   > 至此，一切灯光正常。   
 
 ---
@@ -71,11 +71,11 @@
 
 * 本群推荐使用 “朗科与京东联名的 Class10 / SDHC / A1 的 TF 卡”  
 
-  *<主要是便宜、能用、且拥有京东提供后续保修及换新服务>*  
+  *<主要是便宜、能用、且拥有京东提供后续保修及换新服务（ 仅 Plus 会员 ）>*  
 
 * 某宝等渠道的 “SanDisk Industrial 闪迪工业卡” 。从网友的反馈来看属 MLC 类型 TF 卡，且没 TLC 的擦写缺陷，适合频繁刷机。相比 TLC 拥有更长使用寿命，以及高至 85 度的工作温度。但渠道来源存在风险，请自行判断。  
 
-* 另外可选用 TF 转 eMMC 的特殊 TF 卡，使用上稳定性最佳，但会破坏整体外观。详讯群内 Darya（适合刷写各种系统固件测试等频繁读写使用)。  
+* 另外可选用 TF 转 eMMC 的特殊 TF 卡，使用上稳定性最佳，但会破坏整体外观（极客选择，并不推荐)。  
 
 ##### 2.2.2 TF 卡刷写固件
 
@@ -91,11 +91,11 @@
 
 * 覆盖写入可被写入精心设计的 2GB 空文件所代替，节约大量时间。无残留，获得更好体验。  
 
-  > 下载地址： [zero2GB.img.gz](https://github.com/nicksun98/Others/raw/master/zero2GB.img.gz) （ 文件大小仅为约 2.1 MB / 1.9 MiB 左右 ）  
+  > 下载地址： [Restore-SD-Card-2G.zip](https://openwrt.cc/restore/Restore-SD-Card-2G.zip) （ 文件大小仅为约 1.7 MiB 左右 ）  
   >
-  > 使用方法：先使用写卡软件写入 zero2GB.img.gz ，拔出读卡器并重新插入，再写入真正的软件包即可。  
+  > 使用方法：先使用写卡软件写入 Restore-SD-Card-2G.zip ，拔出读卡器并重新插入，再写入真正的软件包即可。  
   >
-  > 感谢群友 Kane Green 的辛苦付出。  
+  > 感谢群友 SuLingGG 的辛苦付出。  
 
 ##### 2.2.3 TF 卡的其他常见问题
 
@@ -116,7 +116,7 @@
 * Q: 为什么重启后配置丢失？  
   A: 如果您使用的是 SquashFS 文件系统的固件，请再刷机后参照上一条执行清理 Upper Layer 或者 重新挂载 Overlay 分区。如果您使用的是 Ext4 文件系统的固件，请确定 TF 卡是可写入的状态，确定写入的文件及更改已切实写入TF卡，而不是存在于运行 RAM 中。如果遇到连续出现问题或者卡写保护等情况，建议更换 TF 卡，具体请参照 2.2.1 条目。  
 
-  **其他问题请先学会善用 [搜索引擎](https://www.google.com)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 中提出、讨论。**  
+  **其他问题请先学会善用 [搜索引擎](https://www.google.com)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R4S Club](https://is.gd/nanopi_r4s) 中提出、讨论。**  
 
 ---
 
@@ -144,18 +144,18 @@
 
   > 三代外壳：在二代半外壳的基础上，加入 0.91 英寸 OLED 屏幕（详见 2.5 条目），简单安装方法，信息获取更高效。  
 
-  > 友善厂家外壳：类似于一代外壳，用料变薄，优化 TF 卡口 和 外形设计，外观精致。但 Soc 铝柱变短，靠硅脂垫连接 Soc，背后无压片。  
+  > 友善厂家外壳：类似于一代外壳，用料变薄，优化 TF 卡口 和 外形设计，外观精致。但 Soc 铝柱变短，靠硅脂垫连接 Soc，背后无压片。硅脂垫导热性能略微欠佳，极客用户可根据需求选购 15 x 15 x 0.3 毫米的铜片，两边涂抹上硅脂，来替代硅脂垫获得更佳的散热效果。  
 
 ###### 2.3.1.2 安装方法  
 
-  暂略。正确安装才能保证良好散热效果，安装正确的铝合金外壳绝对能应付包括不透风弱电箱等非极端环境下正常使用。如有安装困难或温度过高，不明安装方法可加入 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw)  
+  暂略。正确安装才能保证良好散热效果，安装正确的铝合金外壳绝对能应付包括不透风弱电箱等非极端环境下正常使用。如有安装困难或温度过高，不明安装方法可加入 Telegram 群 [NanoPi R4S Club](https://is.gd/nanopi_r4s)  
 
 ###### 2.3.1.3 半导体和风扇  
 
   半导体制冷片采用珀耳帖效应，安装在铝壳上可显著降低 Soc 温度。  
   注意做好热面散热和温控，否则会损坏制冷片和凝水导致 R2S 主板进液。  
   外壳外加装风扇会进一步降低 Soc 的温度。  
-  交流讨论可加入 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw)  
+  交流讨论可加入 Telegram 群 [NanoPi R4S Club](https://is.gd/nanopi_r4s)  
 
 ###### 2.3.1.4 常见问题  
 
@@ -177,7 +177,7 @@
 * Q: 群内外壳和友善外壳有什么区别？  
     A: 群内外壳已经众筹到最后一批，卖一个少一个，即将售罄绝版。拥有 OLED 的非凡乐趣和更佳的散热能力。友善外壳靠硅脂垫连接，散热会差一些，但是正常使用和非长时间暴力烤鸡不会碰触温度墙，可正常使用。  
 
-  **其他问题请先学会善用 [搜索引擎](https://www.google.com)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 中提出、讨论。**  
+  **其他问题请先学会善用 [搜索引擎](https://www.google.com)，尝试自行解决，对于无法自行解决的问题欢迎阅读 [提问的艺术](https://github.com/betaseeker/How-To-Ask-Questions) 后在 Telegram 群 [NanoPi R4S Club](https://is.gd/nanopi_r4s) 中提出、讨论。**  
 
 ##### 2.3.2 风扇外壳
 
@@ -268,35 +268,26 @@
 
   源于开源社区的努力，使用 OpenWrt 官方源码，各路大佬按自身所需定制编译。 __有特殊需求者请自行编译，不提供任何免费技术支持__ ，现成固件请自行甄选使用。OpenWrt 固件分为 EXT4 格式版本及 SquashFS 格式版本，若使用 TLC 类型 TF 卡写入 SquashFS 格式的固件启动失败，才建议换用 EXT4 格式固件。SquashFS 格式固件可在误配置等情况下使用恢复固件初始设置重置系统（使用 LuCI 管理页面相关菜单或使用 `firstboot` 等命令），EXT4 格式则不具备此功能。下列基于原生 OpenWrt 源码编译固件均提供 SquashFS 格式，部分提供 EXT4 格式。  
 
-  __固件介绍详见各固件仓库主页的 README 和 Releases。__ 部分超频固件保持 1.45V 电压超频至 1608 MHz，发热不变，更高性能。部分固件自带 Soc 调频，不懂不要动。电压表 1 GHz 下都相同，不建议频率低于 800 MHz，一切问题后果自负。若出现反复重启不能稳定，说明 Soc 体质偏差，建议放弃超频。  
+  __固件介绍详见各固件仓库主页的 README 和 Releases。__ 部分超频固件保持 1.45V 电压超频至 1608 MHz，发热不变，更高性能。部分固件自带 Soc 调频，不懂不要动。电压表 1 GHz 下都相同，不建议频率低于 800 MHz，一切问题后果自负。若出现反复重启不能稳定，说明 Soc 体质偏差，建议放弃超频。下载纯原生 OpenWrt/OpenWrt 的固件会导致 DDR4 内存运行在 333MHz 的频率上，内存读写性能变为正常的 1/3 ，下列的固件都修复了此问题。  
 
   设置错误或误操作后，SquashFS 可执行重置，部分固件带了 `fuck` 组件清除残留设置，使用更佳。强烈建议在刷写 SquashFS 固件后执行 `fuck` 或者 `firstboot -y && reboot now` ，使用备份和升级保留备份前请务必确保清楚了解所做的操作。  
 
 * QiuSimons（404 大佬）  
-  地址：[project-openwrt/R2S-OpenWrt](https://github.com/project-openwrt/R2S-OpenWrt)  
-
-* Quintus Chu（502 大佬）  
-  地址：[quintus-lab/Openwrt-R2S](https://github.com/quintus-lab/Openwrt-R2S)  
-
-* CN_SZTL（高大全版）  *<包含 18.06 版本>*  
-  地址：[Telegram @nanopi\_r2s](https://t.me/nanopi\_r2s)  
-
-* Kane Green  
-  地址：[KaneGreen/R2S-OpenWrt](https://github.com/KaneGreen/R2S-OpenWrt)  
+  地址：[QiuSimons/YAOF](https://github.com/qiusimons/YAOF)  
 
 * Nick Bot  
-  地址：[nicksun98/R2S-OpenWrt](https://github.com/nicksun98/R2S-OpenWrt)  
+  地址：[nicholas-opensource/OpenWrt-Autobuild](https://github.com/nicholas-opensource/OpenWrt-Autobuild)  
 
 * 墨子冥  
-  地址：[msylgj/R2S-OpenWrt](https://github.com/msylgj/R2S-OpenWrt)  
+  地址：[msylgj/R2S-R4S-OpenWrt](https://github.com/msylgj/R2S-R4S-OpenWrt)  
 
-* Chuck  *<注意 Branch>*  
-  地址：[fanck0605/openwrt-nanopi-r2s](https://github.com/fanck0605/openwrt-nanopi-r2s)  
+* RikudouPatrickstar（派大星大佬）
+  地址：[RikudouPatrickstar/R2S-OpenWrt](https://github.com/RikudouPatrickstar/R2S-OpenWrt)  
 
   
-  **欢迎补充，欢迎您为开源社区作出贡献。如果您在 Telegram [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 群内询问哪个固件最好用/最稳定等愚蠢问题，您将被移出群聊，因为您没有阅读 Wiki，以及您并没有看到这行文字。**  
+  **欢迎补充，欢迎您为开源社区作出贡献。如果您在 Telegram [NanoPi R4S Club](https://is.gd/nanopi_r4s) 群内询问哪个固件最好用/最稳定等愚蠢问题，您将被移出群聊，因为您没有阅读 Wiki，以及您并没有看到这行文字。**  
   
-##### 4.1.3 基于 Jayanta525 源码的类原生固件
+##### 4.1.3 基于 Jayanta525 源码的类原生固件（已弃用）
 
   使用 [Jayanta525/openwrt-nanopi-r2s](https://github.com/jayanta525/openwrt-nanopi-r2s) 的源码，是原生支持前的重要阶段。但是有未改好 IRQ 等等问题，使用舒适度和性能完整度较落后于 OpenWrt 官方以及群友发布的版本。  
 
@@ -304,23 +295,24 @@
 
 ---
 
-#### 4.2 FriendlyWrt 固件
+#### 4.2 ImmortalWrt 固件
 
-  已不推荐使用，内容已转移，[点击查看](/others/friendlywrt.md)  
 
 ---
 
-#### 4.3 Armbian 固件
+#### 4.3 FriendlyWrt 固件
+
+  已不推荐使用，内容已删除。 
+
+---
+
+#### 4.4 Armbian 固件
 
 * 地址：[Armbian/nanopi-r2s](https://www.armbian.com/nanopi-r2s/)  
 
-* 教程来自 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 群主 Darya 的博客：  
-
-  > 地址: [e.g.daryasyr.com](https://e.g.daryasyr.com)  
-
 ---
 
-#### 4.4 其它Linux 发行版固件
+#### 4.5 其它Linux 发行版固件
 
 * 等待 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 群主 Darya 补充，敬请期待！  
 
