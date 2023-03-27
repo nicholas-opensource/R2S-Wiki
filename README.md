@@ -3,6 +3,7 @@
   欢迎查看 NanoPi-R2S 操作手册。本页旨在为 [NanoPi R2S/R4S Club](https://is.gd/nanopi_r4s) ，收集与解答 NanoPi-R2S 相关问题。  
   如有更好的意见与建议，随时欢迎 PR。  
   或者群内相关发言时直接 @NickBotNLP  
+  *原 NanoPi R2S Club 用户已基本转移到 [NanoPi R4S Club](https://is.gd/nanopi_r4s) ，欢迎前来讨论任何 OpenWrt 相关问题。*  
   **盗我一字，男盗女娼。**
 
 ### 1、R2S 基本介绍
@@ -128,10 +129,10 @@
 
 ##### 2.3.1 铝合金外壳  
 
-  所有铝合金外壳皆出自 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw)。感谢群友们为 NanoPi R2S 所做的贡献。  
+  所有铝合金外壳皆出自 Telegram 群 NanoPi R2S Club 。感谢群友们为 NanoPi R2S 所做的贡献。  
   友善厂家现推出外壳发售，神似 R2S Club 群组的第一代外壳。  
   
-  __来自 Telegram 群 [NanoPi R2S Club](https://t.me/joinchat/JcBRDFWlAEMysWbVdPsxFw) 的众筹定制外壳已经全部售罄，感谢大家半年多的努力。经历了三代半的变化，外壳变成现在成熟的样子，每一代的进步都离不开大家的帮助，非常非常感谢为此努力的所有人。__
+  __来自 Telegram 群 NanoPi R2S Club 的众筹定制外壳已经全部售罄，感谢大家半年多的努力。经历了三代半的变化，外壳变成现在成熟的样子，每一代的进步都离不开大家的帮助，非常非常感谢为此努力的所有人。__
 
 ###### 2.3.1.1 铝合金外壳区别  
 
@@ -259,7 +260,7 @@
 
 ##### 4.1.1 OpenWrt 官方主线支持 R2S
 
-* 2020 年 7 月 28 日，OpenWrt 官方主线加入了对 NanoPi R2S 的正式支持，使用 Longterm Kernel 5.4 内核。感谢为此付出努力的一众网友，感谢 [OpenWrt](https://openwrt.org/) 官方、[Project OpenWrt](https://github.com/project-openwrt) 项目组 和 [Quintus Chu](https://t.me/quintuschu) 大佬，感谢世界各地为开源社区努力贡献的朋友们。  
+* 2020 年 7 月 28 日，OpenWrt 官方主线加入了对 NanoPi R2S 的正式支持，使用 Longterm Kernel 5.4 内核。感谢为此付出努力的一众网友，感谢 [OpenWrt](https://openwrt.org/) 官方、[Project OpenWrt（现 Immortalwrt ）](https://github.com/immortalwrt) 项目组 和 [Quintus Chu](https://t.me/quintuschu) 大佬，感谢世界各地为开源社区努力贡献的朋友们。  
 
   源码地址：[openwrt/openwrt](https://github.com/openwrt/openwrt)  
 
