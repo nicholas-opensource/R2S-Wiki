@@ -192,11 +192,9 @@
 
 #### 2.4 USB 网卡
 
-  Kernel 5.4 对大多数无线网卡的驱动支持都不好，暂无任何值得推荐使用的型号。  
+  大多数无线网卡的驱动支持和使用体验都不好，暂无任何值得推荐使用的型号。  
  
-  旧的 FriendlyWrt 可编译进 811ac 等 USB 网卡，设置为 N 模式，5 GHz。强制频宽 40 MHz，信道 40。重启后，可以跑到 100 Mbps 左右。  
- 
-  原生 OpenWrt 可选用 RTL8811/12AU 例如 Netgear A6100 无线网卡，部分固件支持。也可选用 MT7601 等网卡，不能开启 AP Mode 。群友使用 EDUP 1200M USB 网卡可用，也能开启 AP Mode，未测试且比 A6100 明显偏大。具体参照固件支持。  
+  如果您非要使用 USB 无线网卡作为 AP 来使用，推荐选用 Netgear A6210 和 ASUS AC55 ，或选用更廉价的 811AC 网卡，固件请选择 ImortalWrt （详见 4.2 条目）。    
 
   OpenWrt 支持 USB 的 4G 上网卡，具体请参考有编译支持的固件说明（目前主要支持 Hilink 模式）。  
 
@@ -317,7 +315,7 @@
 
 ---
 
-#### 4.5 其它Linux 发行版固件
+#### 4.5 其它 Linux 发行版固件
 
 * OpenSuSE 等固件，通常支持的阶段非常初级，通常 r8153 的网卡不可用。  
 
@@ -477,7 +475,7 @@
   下载脚本到 /bin 路径下：  
 
   ```shell  
-  wget https://raw.githubusercontent.com/nicksun98/Others/master/cputemp.sh -O /bin/cputemp.sh
+  wget https://raw.githubusercontent.com/nicholas-opensource/OpenWrt-Autobuild/main/PATCH/script/cputemp.sh -O /bin/cputemp.sh
   ```
 
   使用脚本： 
